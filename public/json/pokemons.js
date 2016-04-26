@@ -1,4 +1,4 @@
-var pokemon =
+var pokemon_list =
 [
   {
     "id": "001",

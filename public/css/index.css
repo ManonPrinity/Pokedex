@@ -1,8 +1,11 @@
 #main_div { display: block; width: 100%; height: 100%; text-align: center;}
 	#middle_div { display: inline-block; vertical-align: middle; height: 100%;}
-	#pokedex { display: inline-block; vertical-align: middle; position: relative; width: 748px; height: 544px;}
+	#pokedex { display: inline-block; vertical-align: middle; position: relative; width: 748px; height: 544px; text-align: left;}
 		#background { display: block; position: absolute; z-index: 1; width: 100%; height: 100%; background-image: url("../img/pokedex.png");}
-		#screen_1 { display: block; position: absolute; z-index: 0; left: 65px; top: 160px; width: 245px; height: 165px; background-color: #81a005;}
+		#screen_1 { display: block; position: absolute; z-index: 0; left: 65px; top: 160px; width: 245px; height: 165px; background-color: #81a005; text-align: center;}
+			#screen_1 div { display: inline-block; vertical-align: middle; height: 100%;}
+			#screen_1 img { display: inline-block; vertical-align: middle; margin: auto;}
+			#screen_1 p { display: block; position: absolute; left: 10px; top: 10px; font-family: Pokemon; font-size: 11px;}
 		#inputs_screen_1 { display: block; position: absolute; z-index: 2; left: 38px; top: 382px; width: 293px; height: 121px;}
 			#a_button { display: block; position: absolute; z-index: 2; width: 46px; height: 48px;}
 			#select_button { display: block; position: absolute; z-index: 2; left: 62px; top: 16px; width: 55px; height: 12px;}

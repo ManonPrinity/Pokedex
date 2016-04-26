@@ -8,39 +8,44 @@
 		<link rel="icon" type="img/png" href="public/img/pokeball.png"/>
 	</head>
  
-	<body>
+	<body onload="init();" ng-app>
 		<div id="main_div">
 			<div id="middle_div"></div>
-			<div id="pokedex">
+			<div id="pokedex" ng-controller="pokedex_ctrl">
 				<div id="background"></div>
 				<div id="screen_1">
-					<img id="pokemon_img" src="">
+					<div></div>
+					<img id="pokemon_img" src="public/img/front/1.png">
+					<p id="pokemon_id">001</p>
 				</div>
 				<div id="inputs_screen_1">
-					<input id="a_button" type="button" value="" onclick="alert('a')"/>
-					<input id="select_button" type="button" value="" onclick="alert('select')"/>
-					<input id="start_button" type="button" value="" onclick="alert('start')"/>
-					<input id="up_button" type="button" value="" onclick="alert('up')"/>
-					<input id="down_button" type="button" value="" onclick="alert('down')"/>
-					<input id="left_button" type="button" value="" onclick="alert('left')"/>
-					<input id="right_button" type="button" value="" onclick="alert('right')"/>
-					<input id="text_input" type="text" value="Bulbazaur"/>
+					<input id="a_button" type="button" value="" ng-click="a_button_click()"/>
+					<input id="select_button" type="button" value="" ng-click="select_button_click()"/>
+					<input id="start_button" type="button" value="" ng-click="start_button_click()"/>
+					<input id="up_button" type="button" value="" ng-click="up_button_click()"/>
+					<input id="down_button" type="button" value="" ng-click="down_button_click()"/>
+					<input id="left_button" type="button" value="" ng-click="left_button_click()"/>
+					<input id="right_button" type="button" value="" ng-click="right_button_click()"/>
+					<input id="text_input" type="text" value="Bulbazaur" autofocus autocomplete="off" onkeydown="text_input_changed(event, this.value);"/>
 				</div>
 				<div id="text_input_bg"></div>
 
-				<div id="screen_2"></div>
+				<div id="screen_2">
+					<p>{{name}}</p>
+				</div>
 				<div id="inputs_screen_2">
-					<input id="b_button" type="button" value="" onclick="alert('b')"/>
-					<input id="c_button" type="button" value="" onclick="alert('c')"/>
-					<input id="prev_button" type="button" value="" onclick="alert('prev')"/>
-					<input id="next_button" type="button" value="" onclick="alert('next')"/>
-					<input id="op1_button" type="button" value="" onclick="alert('op1')"/>
-					<input id="op2_button" type="button" value="" onclick="alert('op2')"/>
+					<input id="b_button" type="button" value="" ng-click="b_button_click()"/>
+					<input id="c_button" type="button" value="" ng-click="c_button_click()"/>
+					<input id="prev_button" type="button" value="" ng-click="prev_button_click()"/>
+					<input id="next_button" type="button" value="" ng-click="next_button_click()"/>
+					<input id="op1_button" type="button" value="" ng-click="op1_button_click()"/>
+					<input id="op2_button" type="button" value="" ng-click="op2_button_click()"/>
 				</div>
 			</div>
 		</div>
 
 		<script type="text/javascript" src="public/json/pokemons.js"></script>
-		<script type="text/javascript" src="public/js/index.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+		<script type="text/javascript" src="public/js/app.js"></script>
 	</body>
 </html>
