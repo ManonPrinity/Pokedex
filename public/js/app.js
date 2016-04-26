@@ -6,6 +6,7 @@ var current_id = 1;
 
 function init() {
 
+    play_snd("public/snd/open.wav", 0.5);
     change_pokemon(current_id);
 }
 
@@ -13,8 +14,7 @@ function change_image(id) {
 
     pokemon_img.src = "public/img/front/" + id + ".png";
     pokemon_img.onload = function() {
-
-        //play music
+        play_snd("public/snd/ping_1.wav", 0.5);
     }
 }
 
@@ -89,40 +89,58 @@ function pokedex_ctrl($scope) {
 
     $scope.up_button_click = function() {
 
-        current_id += 10;
-        if (current_id > 151) {
-        	
-            current_id = 151;
+        if (current_id == 151) {
+            play_snd("public/snd/ping_2.wav", 0.1);
+            return ;
         }
-        change_pokemon(current_id);
+        else {
+            current_id += 10;
+            if (current_id > 151) {
+                current_id = 151;
+            }
+            play_snd("public/snd/ping_4.wav", 0.1);
+            change_pokemon(current_id);
+        }
     }
 
     $scope.down_button_click = function() {
 
-        current_id -= 10;
-
-        if (current_id < 1) {
-
-            current_id = 1;
+        if (current_id == 1) {
+            play_snd("public/snd/ping_2.wav", 0.1);
+            return ;
         }
-        change_pokemon(current_id);
+        else {
+            current_id -= 10;
+            if (current_id < 1) {
+                current_id = 1;
+            }
+            play_snd("public/snd/ping_4.wav", 0.1);
+            change_pokemon(current_id);
+        }
     }
 
     $scope.left_button_click = function() {
 
         if (current_id > 1) {
-
             --current_id;
+            play_snd("public/snd/ping_4.wav", 0.1);
+            change_pokemon(current_id);
         }
-        change_pokemon(current_id);
+        else {
+            play_snd("public/snd/ping_2.wav", 0.1);
+        }
     }
 
     $scope.right_button_click = function() {
 
-        if (current_id < 151) { 
-         ++current_id;
+        if (current_id < 151) {
+            ++current_id;
+            play_snd("public/snd/ping_4.wav", 0.1);
+            change_pokemon(current_id);
         }
-        change_pokemon(current_id);
+        else {
+            play_snd("public/snd/ping_2.wav", 0.1);
+        }
     }
 
     $scope.b_button_click = function() {
@@ -159,3 +177,10 @@ function pokedex_ctrl($scope) {
     }
 
 };
+
+function play_snd(src, vol) {
+
+    var snd = new Audio(src);
+    snd.volume = vol;
+    snd.play();
+}
