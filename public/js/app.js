@@ -1,9 +1,3 @@
-// var Pokedex =
-// {
-
-// }
-// console.log(pokemon[0].name);
-
 var pokemon_img = document.getElementById("pokemon_img");
 var pokemon_id = document.getElementById("pokemon_id");
 var text_input = document.getElementById("text_input");
