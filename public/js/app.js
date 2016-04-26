@@ -4,12 +4,9 @@ var text_input = document.getElementById("text_input");
 
 var current_id = 1;
 
-var app = angular.module("my_app", []);
-
 function init()
 {
-	var pokemon = pokemon_list[current_id - 1];
-	change_image(current_id);
+	change_pokemon(current_id);
 }
 
 function change_image(id)
