@@ -7,6 +7,7 @@ var current_id = 1;
 function init() {
 
     play_snd("public/snd/open.wav", 0.5);
+    //play_snd("public/snd/bg.mp3", 0.05);
     change_pokemon(current_id);
 }
 
@@ -18,7 +19,7 @@ function change_image(id) {
     }
 }
 
-function informations(id) {
+function change_informations(id) {
 
 
 }
@@ -125,6 +126,7 @@ function pokedex_ctrl($scope) {
             --current_id;
             play_snd("public/snd/ping_4.wav", 0.1);
             change_pokemon(current_id);
+            $scope.ch(pokemon_list[current_id - 1].name);
         }
         else {
             play_snd("public/snd/ping_2.wav", 0.1);
@@ -174,6 +176,11 @@ function pokedex_ctrl($scope) {
     $scope.op2_button_click = function() {
 
         alert("op2_button_click");
+    }
+
+    $scope.ch = function(n)
+    {
+        $scope.name = n;
     }
 
 };

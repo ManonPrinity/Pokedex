@@ -17,7 +17,12 @@
 			#text_input { display: block; position: absolute; z-index: 2; box-sizing: border-box; left: 49px; top: 63px; width: 122px; height: 56px; line-height: 56px; padding: 10px; color: #fff; font-family: Pokemon; font-size: 11px;}
 		#text_input_bg {  display: block; position: absolute; z-index: 0; left: 88px; top: 445px; width: 122px; height: 56px; background: #111;}
 
-		#screen_2 { display: block; position: absolute; z-index: 0; left: 445px; top: 175px; width: 245px; height: 180px; background-color: #6f8909;}
+		#screen_2 { display: block; position: absolute; z-index: 0; left: 445px; top: 175px; width: 245px; height: 180px; background-color: #6f8909; color: #fff;}
+			#screen_2 section { box-sizing: border-box; width: 250px; height: 190px; padding: 10px; background: #111; overflow: hidden; font-family: Pokemon; font-size: 12px;}
+			#info_1 { display: block;}
+			#info_2 { display: none;}
+			#info_3 { display: none;}
+			#info_4 { display: none;}
 		#inputs_screen_2 { display: block; position: absolute; z-index: 2; left: 446px; top: 365px; width: 245px; height: 130px;}
 			#b_button { display: block; position: absolute; z-index: 2; top: 20px; width: 53px; height: 40px;}
 			#c_button { display: block; position: absolute; z-index: 2; left: 53px; top: 20px; width: 50px; height: 40px;}
