@@ -1,0 +1,9 @@
+#main_div { display: block; width: 100%; height: 100%; text-align: center;}
+	#middle_div { display: inline-block; vertical-align: middle; height: 100%;}
+	#pokedex { display: inline-block; vertical-align: middle; position: relative; width: 748px; height: 544px;}
+		#background { display: block; position: absolute; z-index: 1; width: 100%; height: 100%; background-image: url("../img/pokedex.png");}
+		#screen_1 { display: block; position: absolute; z-index: 0; left: 65px; top: 160px; width: 245px; height: 165px; background-color: #81a005;}
+		#inputs_screen_1 { display: block; position: absolute; z-index: 2; left: 38px; top: 382px; width: 293px; height: 121px; background-color: rgba(0, 0, 0, 0.5);}
+
+		#screen_2 { display: block; position: absolute; z-index: 0; left: 445px; top: 175px; width: 245px; height: 180px; background-color: #6f8909;}
+		#inputs_screen_2 { display: block; position: absolute; z-index: 2; left: 446px; top: 365px; width: 245px; height: 130px; background-color: rgba(0, 0, 0, 0.5);}
