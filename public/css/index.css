@@ -19,10 +19,18 @@
 
 		#screen_2 { display: block; position: absolute; z-index: 0; left: 445px; top: 175px; width: 245px; height: 180px; background-color: #6f8909; color: #fff;}
 			#screen_2 section { box-sizing: border-box; width: 250px; height: 190px; padding: 10px; background: #111; overflow: hidden; font-family: Pokemon; font-size: 12px;}
-			#info_1 { display: block;}
-			#info_2 { display: none;}
-			#info_3 { display: none;}
-			#info_4 { display: none;}
+			#page_1 { display: block; font-size: 10px;}
+				#page_1 .name { height: 20px; line-height: 20px;}
+				#page_1 .species { line-height: 24px; margin-top: 20px;}
+				#page_1 .types { line-height: 24px; margin-top: 20px;}
+			#page_2 { display: none;}
+				#page_2 .height { }
+					#page_2 .height p { display: inline-block; vertical-align: top; line-height: 20px;}
+				#page_2 .weight { }
+					#page_2 .weight p { display: inline-block; vertical-align: top; line-height: 24px; margin-top: 20px;}
+				#page_2 .abilities { line-height: 24px; margin-top: 20px;}
+			#page_3 { display: none;}
+			#page_4 { display: none;}
 		#inputs_screen_2 { display: block; position: absolute; z-index: 2; left: 446px; top: 365px; width: 245px; height: 130px;}
 			#b_button { display: block; position: absolute; z-index: 2; top: 20px; width: 53px; height: 40px;}
 			#c_button { display: block; position: absolute; z-index: 2; left: 53px; top: 20px; width: 50px; height: 40px;}
