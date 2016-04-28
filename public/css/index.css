@@ -31,6 +31,7 @@
 				#page_2 .abilities { line-height: 24px; margin-top: 20px;}
 			#page_3 { display: none;}
 			#page_4 { display: none;}
+				#page_4 p {height: 20px; line-height: 20px; font-size: 10px;}
 		#inputs_screen_2 { display: block; position: absolute; z-index: 2; left: 446px; top: 365px; width: 245px; height: 130px;}
 			#b_button { display: block; position: absolute; z-index: 2; top: 20px; width: 53px; height: 40px;}
 			#c_button { display: block; position: absolute; z-index: 2; left: 53px; top: 20px; width: 50px; height: 40px;}
