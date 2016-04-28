@@ -10,6 +10,7 @@ pages[3] = document.getElementById("page_4");
 
 var current_id = 1;
 var current_page = 1;
+var current_music = 0;
 
 function init() {
 
@@ -231,6 +232,12 @@ function pokedex_ctrl($scope) {
         for (var i = 0; i < pokemon_list[id - 1].abilities.length; ++i)
             abilities += pokemon_list[id - 1].abilities[i] + " ";
         $scope.abilities = abilities;
+
+        // Evolution du Pokemon
+        var evolution = " ";
+        for (var i = 0; i < pokemon_list[id - 1].evolution.lenght; ++i)
+            evolution += pokemon_list[id - 1].evolution[i] + " ";
+        $scope.evolution = evolution;
     }
     $scope.update_pages(current_id);
 };
@@ -240,4 +247,9 @@ function play_snd(src, vol) {
     var snd = new Audio(src);
     snd.volume = vol;
     snd.play();
+}
+
+function change_music() {
+
+
 }
